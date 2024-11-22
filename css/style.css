@@ -1,0 +1,18 @@
+.underlined:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 2px;
+}
+
+.selected {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 2px;
+}
+
+.cell {
+    background-color: #88bdbc;
+    padding: 25px;
+    border-radius: 10px;
+    margin: 10px;
+}
