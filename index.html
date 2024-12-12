@@ -15,7 +15,7 @@
             <div class="container-fluid">
               <a class="navbar-brand" style="cursor: pointer;">Поиск фильмов</a>
               <form class="d-flex" role="search">
-                <input id="searchInput" class="form-control me-2 shadow-none" type="search" placeholder="Search" aria-label="Search" required>
+                <input id="searchInput" class="form-control me-2 shadow-none" type="search" placeholder="Поиск" aria-label="Search" required>
                 <button id="searchBtn" class="btn btn-outline-success" type="submit">Поиск</button>
               </form>
             </div>
@@ -84,27 +84,27 @@
                                             <div class="col-5">
                                                 <table class="table table-borderless table-secondary">
                                                     <tr>
-                                                        <td class="fw-semibold">Type</td>
+                                                        <td class="fw-semibold">Тип</td>
                                                         <td>${movie.show.type}</td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="fw-semibold">Premier date</td>
+                                                        <td class="fw-semibold">Дата премьеры</td>
                                                         <td>${movie.show.premiered}</td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="fw-semibold">Language</td>
+                                                        <td class="fw-semibold">Язык</td>
                                                         <td>${movie.show.language}</td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="fw-semibold">Runtime</td>
+                                                        <td class="fw-semibold">Продолжительность</td>
                                                         <td>${movie.show.runtime != null ? `${movie.show.runtime} minutes` : '-'}</td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="fw-semibold">Status</td>
+                                                        <td class="fw-semibold">Статус</td>
                                                         <td>${movie.show.status}</td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="fw-semibold">Genres</td>
+                                                        <td class="fw-semibold">Жанры</td>
                                                         <td>${movie.show.genres.length > 0 ? `${movie.show.genres.join(', ')}` : '-'}</td>
                                                     </tr>
                                                 </table>
@@ -115,7 +115,7 @@
                                 </div>
 
                                 <div class="p-2 bg-light rounded-2 mb-2">
-                                    <span class="fw-bold">Description:</span>
+                                    <span class="fw-bold">Описание:</span>
                                     ${movie.show.summary != null ? movie.show.summary : 'None'}
                                 </div>
 
@@ -123,17 +123,17 @@
                                     <div class="accordion-item">
                                         <h2 class="accordion-header">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                            Episodes
+                                            Эпизоды
                                         </button>
                                         </h2>
                                         <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                                         <div class="accordion-body">
                                             <table class="table table-bordered">
                                                 <thead>
-                                                    <th>Name</th>
-                                                    <th>Season</th>
-                                                    <th>Number</th>
-                                                    <th>Date</th>    
+                                                    <th>Название</th>
+                                                    <th>Сезон</th>
+                                                    <th>Номер</th>
+                                                    <th>Дата</th>    
                                                 </thead>
                                                 <tbody id="${accordionId}">
                                                 </tbody>
