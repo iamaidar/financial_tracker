@@ -14,18 +14,43 @@
         <nav class="navbar bg-body-tertiary">
             <div class="container-fluid">
               <a class="navbar-brand" style="cursor: pointer;">Поиск фильмов</a>
-              <form class="d-flex" role="search">
-                <input id="searchInput" class="form-control me-2 shadow-none" type="search" placeholder="Поиск" aria-label="Search" required>
-                <button id="searchBtn" class="btn btn-outline-success" type="submit">Поиск</button>
-              </form>
             </div>
           </nav>
     </header>
 
-    <h2 id="page-title" class="text-center mt-5 mb-3"></h2>
+    <div class="row">
+        <div class="col-8 mx-auto">
+            <div class="mb-5 rounded-4 bg-secondary-subtle p-4">
+                <h5 class="text-center">TVMaze API</h5>
+                <p class="" style="font-size: 20px;">
+                    <a href="https://www.tvmaze.com/api">TVmaze API</a> предоставляет доступ к данным о телешоу, эпизодах, актерах и другой информации, связанной с телевидением. API идеально подходит для разработчиков, которые хотят интегрировать информацию о телепрограммах в свои приложения, веб-сайты или проекты.
+                    <br>
+                    Основные возможности:
+                    Получение информации о популярных телешоу и их эпизодах.
+                    Поиск шоу по названию или другим критериям.
+                    Доступ к биографиям актеров и их фильмографиям.
+                    Возможность работы с данными о расписании телетрансляций.
+                    Документация:
+                    Полное описание возможностей и примеры запросов доступны по ссылке на документацию.
+                </p>
+            </div>
+        </div>
+    </div>
 
-    <div id="main" class="row m-0">
-        <div class="col-10 mx-auto p-0" id="movie-container"></div>
+    <div class="row m-0">
+        <div class="col-8 mx-auto">
+            <div>
+                <form class="d-flex" role="search">
+                    <input id="searchInput" class="form-control me-2 shadow-none" type="search" placeholder="Поиск" aria-label="Search" required>
+                </form>
+            </div>
+
+            <h2 id="page-title" class="text-center mt-5 mb-3"></h2>
+
+            <div id="main" class="row m-0">
+                <div class="" id="movie-container"></div>
+            </div>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
@@ -81,7 +106,7 @@
                                             <h5 class="my-3">About</h5>
                                         </div>
                                         <div class="row d-flex justify-content-center justify-content-lg-start">
-                                            <div class="col-5">
+                                            <div class="col-6">
                                                 <table class="table table-borderless table-secondary">
                                                     <tr>
                                                         <td class="fw-semibold">Тип</td>
@@ -160,7 +185,7 @@
             $('#searchInput').val('');
         });
 
-        $('#searchBtn').click(function(event) {
+        $('#searchInput').on('input', function(event) {
             event.preventDefault();
             let query = $('#searchInput').val();
 
