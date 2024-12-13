@@ -117,7 +117,7 @@ const showMovies = function(data) {
     }
 };
 
-$('#page-title').text('Введите имя или название фильма сериала в поиск');
+$('#page-title').text('Введитеназвание фильма или сериала в поиск');
 
 $('.navbar-brand').click(function() {
     $('#movie-container').empty();
